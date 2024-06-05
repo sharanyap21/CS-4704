@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/inter"
+        android:gravity="center"
+        android:text="Steger Center Assistance"
+        android:textColor="@color/dark_blue"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/inputLayout"
+        android:layout_below="@id/textViewTitle"
+        android:paddingBottom="16dp" />
+
+    <LinearLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/form_box"
+            android:backgroundTint="@color/grey"
+            android:hint="Type a message..."
+            android:paddingStart="17dp"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/buttonSend"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/dark_blue"
+            android:text="Send" />
+    </LinearLayout>
+
+</RelativeLayout>
